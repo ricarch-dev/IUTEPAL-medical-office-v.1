@@ -2,7 +2,7 @@ import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET_BY_AGE_RANGE(req: NextRequest) {
+export async function GET(req: NextRequest) {
   const cookieStore = cookies();
   const supabase = createRouteHandlerClient({
     cookies: () => cookieStore,
